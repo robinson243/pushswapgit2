@@ -6,7 +6,7 @@
 /*   By: romukena <romukena@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 16:14:56 by romukena          #+#    #+#             */
-/*   Updated: 2025/08/02 18:38:54 by romukena         ###   ########.fr       */
+/*   Updated: 2025/08/06 01:46:43 by romukena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ typedef struct s_piles
 	int	size_b;
 }	t_piles;
 
-void	push_swap(char **av);
+int		push_swap(char **av);
 int		push_swap_strlen(char **av);
-void	error_detected(int *pile);
-int		push_swap_atoi(char *str, int *pile);
-void	check_doubles(int *pile, int size);
+int		push_swap_atoi(char *str, int *error);
+int		check_doubles(int *pile, int size);
 void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char *s, char *charset);
+void	free_tab(char **tab);
 /*Instructions*/
 void	swap_a(t_piles *pile, int bonus);
 void	swap_b(t_piles *pile, int bonus);
